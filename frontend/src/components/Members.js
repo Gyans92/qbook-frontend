@@ -50,7 +50,7 @@ class Members extends React.Component {
   render() {
     const { currentMember, user } = this.state || {};
     console.log(currentMember);
-    let { scraps } = currentMember || [];
+    let { scraps } = user || [];
     // let scraps = [
     //   "hello, You are so adorable!!",
     //   "Like your hair!",
