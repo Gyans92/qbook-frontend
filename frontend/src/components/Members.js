@@ -23,7 +23,8 @@ class Members extends React.Component {
       college: [],
       members: [],
       currentMember: {},
-      user: {}
+      user: {},
+      scrap1: ""
     };
   }
 
@@ -43,12 +44,12 @@ class Members extends React.Component {
   handleChange = e => {
     const currentMember = this.state.currentMember || [];
     console.log(e, e.target);
-    currentMember.scraps.push(e.target.value);
-    this.setState({ currentMember });
+    // currentMember.scraps.push(e.target.va+lue);
+    this.setState({ scrap: e.target.value });
   };
 
   render() {
-    const { currentMember, user } = this.state || {};
+    const { currentMember, user, scraps1 } = this.state || {};
     console.log(currentMember);
     let { scraps } = user || [];
     // let scraps = [
@@ -114,7 +115,7 @@ class Members extends React.Component {
             <InputLabel htmlFor="outlined-adornment-amount"></InputLabel>
             <OutlinedInput
               id="outlined-adornment-amount"
-              value={scraps && scraps[0]}
+              value={scraps1 && scraps1}
               onChange={e => this.handleChange(e)}
               startAdornment={
                 <InputAdornment position="start">
@@ -124,6 +125,9 @@ class Members extends React.Component {
               labelWidth={60}
             />
           </FormControl>
+          <div className="Submit">
+            <input type="Submit" name="submit"></input>
+          </div>
         </div>
       </div>
     );
