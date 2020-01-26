@@ -20,21 +20,27 @@ function App() {
   return (
     <div class="main">
       <AppBar color="" position="static">
-        <List component="nav">
+        {/* <List component="nav">
           <ListItem component="div">
             <ListItemText inset>
               <TypoGraphy color="inherit" variant="title">
                 Logo
               </TypoGraphy>
-            </ListItemText>
+            </ListItemText> */}
 
-            <ListItemText inset>
+        {/* <ListItemText inset>
               <TypoGraphy color="inherit" variant="title">
                 QueerBook
               </TypoGraphy>
-            </ListItemText>
-          </ListItem>
-        </List>
+            </ListItemText> */}
+        {/* <span class="d-block p-1 bg-primary text-white">
+              <p class="font-weight-bolder text-lg-center">QueerBook</p>
+            </span> */}
+        {/* </ListItem> */}
+        {/* </List> */}
+        <span class="d-block p-1 bg-primary text-white">
+          <p class="font-weight-bolder text-lg-center">QueerBook</p>
+        </span>
         <BrowserRouter>
           <Switch>
             <Route path="/member" component={Members} />
