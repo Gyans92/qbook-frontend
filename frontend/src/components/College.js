@@ -81,7 +81,7 @@ class Members extends React.Component {
           <div>
             <h1>
               {" "}
-              <strong> Memeber</strong>{" "}
+              <strong> Members</strong>{" "}
             </h1>
             <div class="row">
               {membersInfo.map(eachMember => (

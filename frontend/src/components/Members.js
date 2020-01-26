@@ -106,14 +106,15 @@ class Members extends React.Component {
           </Card>
         </div>
         <div className="oldScraps">
-          {scraps && scraps.map(item => <div>{item}</div>)}
+          {scraps &&
+            scraps.map(item => <div className="oldScraps-1">{item}</div>)}
         </div>
         <div className="scrap">
           <FormControl fullWidth className={classes.margin} variant="outlined">
             <InputLabel htmlFor="outlined-adornment-amount"></InputLabel>
             <OutlinedInput
               id="outlined-adornment-amount"
-              value={scraps && [scraps && scraps.length - 1]}
+              value={scraps && scraps[0]}
               onChange={e => this.handleChange(e)}
               startAdornment={
                 <InputAdornment position="start">

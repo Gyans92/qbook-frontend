@@ -28,29 +28,14 @@ class Home extends React.Component {
   openCollege = id => {
     window.location.assign("http://localhost:3000/college/" + id);
   };
+  openAddMember = id => {
+    window.location.assign("http://localhost:3000/registration");
+  };
   render() {
     const collegeName = this.state.collegeName || [];
     console.log(collegeName);
     return (
       <div>
-        <AppBar color="" position="static">
-          <List component="nav">
-            <ListItem component="div">
-              <ListItemText inset>
-                <TypoGraphy color="inherit" variant="title">
-                  Logo
-                </TypoGraphy>
-              </ListItemText>
-
-              <ListItemText inset>
-                <TypoGraphy color="inherit" variant="title">
-                  QueerBook
-                </TypoGraphy>
-              </ListItemText>
-            </ListItem>
-          </List>
-        </AppBar>
-
         <div class="row-fluid sideBar">
           <div id="accordion">
             <div class="card">
@@ -101,9 +86,9 @@ class Home extends React.Component {
           </div>
         </div>
 
-        <span class="d-block p-1 bg-primary text-white">
+        {/* <span class="d-block p-1 bg-primary text-white">
           <p class="font-weight-bolder text-lg-center">QueerBook</p>
-        </span>
+        </span> */}
 
         <div class="container-fluid" class="float-right">
           <div class="container" class="above">
@@ -112,7 +97,12 @@ class Home extends React.Component {
             </div>
           </div>
           <div class="container-fluid" class="float-right ">
-            <button type="button" class="float-right" class="btn btn-success">
+            <button
+              type="button"
+              class="float-right"
+              class="btn btn-success"
+              onClick={() => this.openAddMember()}
+            >
               {" "}
               +ADD
             </button>
