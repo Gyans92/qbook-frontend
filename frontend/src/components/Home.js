@@ -26,14 +26,10 @@ class Home extends React.Component {
   };
 
   openCollege = id => {
-    window.location.assign(
-      "https://gyans92.github.io/qbook-frontend/#/college/" + id
-    );
+    window.location.assign("http://localhost:3000/college/" + id);
   };
   openAddMember = id => {
-    window.location.assign(
-      "https://gyans92.github.io/qbook-frontend/#/registration"
-    );
+    window.location.assign("http://localhost:3000/registration");
   };
   render() {
     const collegeName = this.state.collegeName || [];
@@ -68,7 +64,7 @@ class Home extends React.Component {
                     // console.log(eachCollege)
                     <a
                       onClick={() => this.openCollege(eachCollege.collegeId)}
-                      class="list-group-item list-group-item-action list-group-item-primary"
+                      class="list-group-item list-group-item-action list-group-item-primary list-cursor"
                     >
                       <p class="small">{eachCollege.collegeName}</p>
                     </a>

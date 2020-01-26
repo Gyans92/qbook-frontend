@@ -30,3 +30,7 @@
 .list-no-bullet {
   list-style-type: none;
 }
+
+.list-cursor {
+  cursor: pointer;
+}

@@ -29,7 +29,7 @@ class Members extends React.Component {
 
   openMember = id => {
     window.location.assign(
-      `https://gyans92.github.io/qbook-frontend/#/member?user=${id}&&email=gya8asd9ns23@gmail.com`
+      `http://localhost:3000/member?user=${id}&&email=gya8asd9ns23@gmail.com`
     );
   };
 
@@ -38,7 +38,7 @@ class Members extends React.Component {
     console.log(membersInfo);
     return (
       <div class=".container-fluid ">
-        <AppBar color="" position="static">
+        {/* <AppBar color="" position="static">
           <List component="nav">
             <ListItem component="div">
               <ListItemText inset>
@@ -54,7 +54,7 @@ class Members extends React.Component {
               </ListItemText>
             </ListItem>
           </List>
-        </AppBar>
+        </AppBar> */}
         <div className="container">
           <div className="jumbotron jumbotron-margin">
             <p> University of California</p>
