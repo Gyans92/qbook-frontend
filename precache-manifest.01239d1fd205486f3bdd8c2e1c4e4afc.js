@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c69e81ee3d62b1e08dd11bec00d33e47",
+    "revision": "8af9209410b085b062e8a2aa12b675fe",
     "url": "/qbook-frontend/index.html"
   },
   {
-    "revision": "fa95b7d9ebc274aaba0d",
+    "revision": "6648a7ed026f0d38ab39",
     "url": "/qbook-frontend/static/css/2.17e5ed98.chunk.css"
   },
   {
-    "revision": "a7527c60702926516d6e",
-    "url": "/qbook-frontend/static/css/main.e3c0b863.chunk.css"
+    "revision": "18ab23914ce6ab6baabf",
+    "url": "/qbook-frontend/static/css/main.e4c29484.chunk.css"
   },
   {
-    "revision": "fa95b7d9ebc274aaba0d",
-    "url": "/qbook-frontend/static/js/2.8101827d.chunk.js"
+    "revision": "6648a7ed026f0d38ab39",
+    "url": "/qbook-frontend/static/js/2.33f0beab.chunk.js"
   },
   {
     "revision": "755c3f280ab852eee3de9debeb376cd4",
-    "url": "/qbook-frontend/static/js/2.8101827d.chunk.js.LICENSE"
+    "url": "/qbook-frontend/static/js/2.33f0beab.chunk.js.LICENSE"
   },
   {
-    "revision": "a7527c60702926516d6e",
-    "url": "/qbook-frontend/static/js/main.d2e13ee0.chunk.js"
+    "revision": "18ab23914ce6ab6baabf",
+    "url": "/qbook-frontend/static/js/main.ef074053.chunk.js"
   },
   {
     "revision": "e6ada02f0ea15f77c3f8",
