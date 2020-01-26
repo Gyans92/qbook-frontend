@@ -26,10 +26,14 @@ class Home extends React.Component {
   };
 
   openCollege = id => {
-    window.location.assign("http://localhost:3000/college/" + id);
+    window.location.assign(
+      "https://gyans92.github.io/qbook-frontend/#/college/" + id
+    );
   };
   openAddMember = id => {
-    window.location.assign("http://localhost:3000/registration");
+    window.location.assign(
+      "https://gyans92.github.io/qbook-frontend/#/registration"
+    );
   };
   render() {
     const collegeName = this.state.collegeName || [];

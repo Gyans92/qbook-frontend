@@ -29,7 +29,7 @@ class Members extends React.Component {
 
   openMember = id => {
     window.location.assign(
-      `http://localhost:3000/member?user=${id}&&email=gya8asd9ns23@gmail.com`
+      `https://gyans92.github.io/qbook-frontend/#/member?user=${id}&&email=gya8asd9ns23@gmail.com`
     );
   };
 
@@ -83,27 +83,25 @@ class Members extends React.Component {
               {" "}
               <strong> Members</strong>{" "}
             </h1>
-            <div class="row">
+            <div class="row margin-row">
               {membersInfo.map(eachMember => (
                 <div
-                  class="col-lg-6"
+                  class="col-lg-12"
                   style={{
                     border: "0.5px dotted black",
                     borderRadius: 10,
-                    margin: 2
+                    margin: 4,
+                    padding: 4
                   }}
                   onClick={() => this.openMember(eachMember.email)}
                 >
                   <div class="col-lg-6">
-                    <div>
-                      <p>{eachMember.name}</p>
-                    </div>
+                    <p>
+                      <strong>{eachMember.name}</strong>
+                    </p>
                   </div>
-
                   <div class="col-lg-6">
-                    <div>
-                      <p>Interested In: {eachMember.interestedIn}</p>
-                    </div>
+                    <p>Interested In: {eachMember.interestedIn}</p>
                   </div>
                 </div>
               ))}
