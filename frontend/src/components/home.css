@@ -18,12 +18,22 @@
 
 }
 
-.home-body {
-	float: right;
-	border:1px solid black;
-	display: block;
+.btn-link {
+	text-decoration: none !important;
+	display: inline-block;
+	-webkit-transition-duration: 1s; 
+  	transition-duration: 1s;
 }
 
-.ml-1 {
-  margin-left: ($spacer * .25) !important;
+.btn-link:hover {
+	
+}
+
+#headingOne:hover, #headingTwo:hover {
+	background-color: rgba(211, 211, 211, 0.5);
+}
+
+.small {
+	margin-bottom: 0px;
+	margin-left: 10px;
 }

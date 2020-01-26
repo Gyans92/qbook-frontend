@@ -5,10 +5,33 @@ import ListItemText from "@material-ui/core/ListItemText";
 import TypoGraphy from "@material-ui/core/Typography";
 import AppBar from "@material-ui/core/AppBar";
 import "./home.css"
+import axios from "axios";
+import { getQueryArg } from "../utils";
+
 
 
 class Home extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      collegeName: []
+    };
+  }
+
+  componentDidMount = () => {
+    axios.get("http://3.133.5.150:8080/search-college").then(res => {
+      let collegeName = res.data || [];
+      this.setState({
+        collegeName: collegeName
+      });
+    });
+  }
+  
+  
   render() {
+    const collegeName = this.state.collegeName || [];
+    console.log(collegeName);
     return (
       <div>
         <AppBar color="" position="static">
@@ -29,46 +52,39 @@ class Home extends React.Component {
           </List>
         </AppBar>
 
-    <div className="sideBar">
-      <div id="accordion">
-        <div class="card">
-         <div class="card-header" id="headingOne">
-          <h5 class="mb-0">
-           <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-            Colleges
-          </button>
-         </h5>
-        </div>
+        <div class="row-fluid sideBar">
 
-        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-          
-           <div class="list-group">
-            <a href="#" class="list-group-item list-group-item-action list-group-item-primary">University of California, Los Angeles</a>
-            <a href="#" class="list-group-item list-group-item-action list-group-item-secondary">University of California, Irvine</a>
-            <a href="#" class="list-group-item list-group-item-action list-group-item-success">University of California, Riverside</a>
-            <a href="#" class="list-group-item list-group-item-action list-group-item-danger">University of California, San Diego</a>
-          </div>
+<div id="accordion">
+  <div class="card">
+   <div class="card-header" id="headingOne">
+    <h5 class="mb-0">
+     <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+         Colleges
+    </button>
+   </h5>
+  </div>
 
-        </div>
-
-
-
- 
-
-      </div>
-
-      <div class="card">
-         <div class="card-header" id="">
-          <h5 class="mb-0">
-           <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-            Events
-          </button>
-         </h5>
-      </div>
-      </div>
-
+  <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+    
+     <div class="list-group">
+      <a href="#" class="list-group-item list-group-item-action list-group-item-primary"><p class="small"></p></a>
+      <a href="#" class="list-group-item list-group-item-action list-group-item-secondary"><p class="small">University of California, Irvine</p></a>
+      <a href="#" class="list-group-item list-group-item-action list-group-item-success"><p class="small">University of California, Riverside</p></a>
+      <a href="#" class="list-group-item list-group-item-action list-group-item-danger"><p class="small">University of California, San Diego</p></a>
     </div>
   </div>
+</div>
+
+<div class="card">
+   <div class="card-header" id="headingTwo">
+    <h5 class="mb-0">
+    <a href="#" class="btn btn-link"> Events </a>
+   </h5>
+</div>
+</div>
+
+</div>
+</div>
       
         <span class="d-block p-1 bg-primary text-white"><p class="font-weight-bolder text-lg-center">QueerBook</p></span>
 
