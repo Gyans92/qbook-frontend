@@ -24,10 +24,10 @@ class Home extends React.Component {
       });
     });
   };
-  
+
   openCollege = id => {
     window.location.assign("http://localhost:3000/college/" + id);
-  }
+  };
   render() {
     const collegeName = this.state.collegeName || [];
     console.log(collegeName);
@@ -78,7 +78,7 @@ class Home extends React.Component {
                   {collegeName.map(eachCollege => (
                     // console.log(eachCollege)
                     <a
-                      onClick={ () => this.openCollege(eachCollege.collegeId)}
+                      onClick={() => this.openCollege(eachCollege.collegeId)}
                       class="list-group-item list-group-item-action list-group-item-primary"
                     >
                       <p class="small">{eachCollege.collegeName}</p>
@@ -131,13 +131,15 @@ class Home extends React.Component {
               <ul class="list-unstyled">
                 <li>
                   {" "}
-                  <p class="font-weight-bolder"> College: </p>{collegeName.map(eachCollege =>((<p class="large"> 
-                    {eachCollege.collegeName}</p>)
-                  )) }
+                  <p class="font-weight-bolder"> College: </p>
+                  {collegeName.map(eachCollege => (
+                    <p class="large">{eachCollege.collegeName}</p>
+                  ))}
                 </li>
                 <li></li>
                 <li>
-                  <p class="font-weight-bolder">Sponsors: </p>{}
+                  <p class="font-weight-bolder">Sponsors: </p>
+                  {}
                 </li>
                 <li></li>
                 <li>

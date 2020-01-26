@@ -10,17 +10,11 @@
   list-style-type: none;
 }
 
-.maginZero {
-}
-
 .btn-link {
   text-decoration: none !important;
   display: inline-block;
   -webkit-transition-duration: 1s;
   transition-duration: 1s;
-}
-
-.btn-link:hover {
 }
 
 #headingOne:hover,
