@@ -18,3 +18,12 @@
 
 }
 
+.home-body {
+	float: right;
+	border:1px solid black;
+	display: block;
+}
+
+.ml-1 {
+  margin-left: ($spacer * .25) !important;
+}
