@@ -6,3 +6,19 @@
   height: 100vh;
   background-size: cover;
 }
+
+.portfolio {
+  float: left;
+  height: 600px;
+  width: 30%;
+}
+
+.scrap,
+.oldScraps {
+  background-color: cornsilk;
+  height: auto;
+  width: 65%;
+  float: right;
+  margin: 30px;
+  /* margin-top: 200px; */
+}
