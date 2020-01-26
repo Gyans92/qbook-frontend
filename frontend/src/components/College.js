@@ -19,8 +19,10 @@ class Members extends React.Component {
 
   componentDidMount = () => {
     axios.get("http://3.133.5.150:8080/search-user").then(res => {
+      let url = window.location.href;
+      let keyword = url.split("/").pop();
       let members = res.data || [];
-      let users = members.filter(a => a.college == "UCLA");
+      let users = members.filter(a => a.college == keyword);
       this.setState({
         membersInfo: users
       });
