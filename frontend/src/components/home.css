@@ -34,3 +34,8 @@
 .list-cursor {
   cursor: pointer;
 }
+
+.container-fluid {
+  float: none !important;
+  margin-left: 250px;
+}

@@ -24,7 +24,7 @@ class Members extends React.Component {
       members: [],
       currentMember: {},
       user: {},
-      scrap1: ""
+      scraps1: ""
     };
   }
 
@@ -45,7 +45,14 @@ class Members extends React.Component {
     const currentMember = this.state.currentMember || [];
     console.log(e, e.target);
     // currentMember.scraps.push(e.target.va+lue);
-    this.setState({ scrap: e.target.value });
+    this.setState({ scraps1: e.target.value });
+  };
+
+  submitScrap = () => {
+    const { user, scraps1 } = this.state || {};
+    let { scraps } = user || [];
+    scraps.push(scraps1);
+    console.log(user);
   };
 
   render() {
@@ -126,7 +133,11 @@ class Members extends React.Component {
             />
           </FormControl>
           <div className="Submit">
-            <input type="Submit" name="submit"></input>
+            <input
+              type="Submit"
+              name="submit"
+              onClick={this.submitScrap}
+            ></input>
           </div>
         </div>
       </div>
